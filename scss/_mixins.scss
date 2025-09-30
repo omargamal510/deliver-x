@@ -35,4 +35,19 @@
     height: $mobile;
   }
 }
+
+@mixin navbarButton {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  padding: 18px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: $linear-transition-3;
+}
+
+@mixin navbarButtonHover {
+  background-color: $primary-orange;
+  color: white;
+  border: 1px solid $primary-orange;
+}
 // Navbar

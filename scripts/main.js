@@ -1,17 +1,20 @@
 // nav
 
 import { navMainUl } from "./dom.js";
+import { createHTMLElements } from "./utils.js";
+
+const navLinks = [
+  "Home",
+  "About",
+  "Pricing",
+  "Pages <i class='fa fa-angle-down'></i>",
+  "Cart",
+];
+const navButtons = ["Download app", "Register"];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = ["Home", "About", "Pricing", "Pages", "Cart"];
-  const navButtons = ["Download app", "Register"];
-  navLinks.forEach((linkText, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = linkText.includes("Pages")
-      ? `${linkText} <i class="fa fa-angle-down"></i>`
-      : linkText;
-    navMainUl.appendChild(li);
-  });
+  createHTMLElements(navLinks, "li", navMainUl);
+  createHTMLElements(navButtons, "button", navMainUl, "navbar-button");
 });
 
 // nav

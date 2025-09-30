@@ -26,22 +26,18 @@ nav {
   padding-top: 30px;
 
   .main-logo {
-    display: block;
+    display: flex;
   }
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-main(40px, space-between, flex-start);
 }
 
 .nav-main-ul {
   width: 100%;
-  margin-top: 20px;
-
   list-style: none;
-  @include flex-main(40px, flex-end, center);
+  @include flex-main(30px, flex-end, center);
 
   li {
     font-weight: 500;
@@ -49,11 +45,30 @@ nav {
     transition: $linear-transition-3;
     cursor: pointer;
     @include flex-main(7px, center, center);
-    border: 1px solid #f00;
   }
 
   li:hover {
     color: $primary-orange;
+  }
+
+  li i {
+    transition: $linear-transition-3;
+  }
+
+  li:hover i {
+    transform: rotate(180deg);
+  }
+
+  button {
+    @include navbarButton;
+  }
+
+  button:hover {
+    @include navbarButtonHover;
+  }
+
+  button:last-of-type {
+    @include navbarButtonHover;
   }
 }
 
