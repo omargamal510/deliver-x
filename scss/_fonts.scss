@@ -1,0 +1,19 @@
+$metropolis-fonts: (
+  100: "Thin",
+  300: "Light",
+  400: "Regular",
+  500: "Medium",
+  600: "SemiBold",
+  700: "Bold",
+  900: "Black",
+);
+
+@each $weight, $name in $metropolis-fonts {
+  @font-face {
+    font-family: "Metropolis";
+    src: url("/fonts/Metropolis/Metropolis-#{$name}.otf") format("opentype");
+    font-weight: #{$weight};
+    font-style: normal;
+    font-display: swap;
+  }
+}

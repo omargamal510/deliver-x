@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeliverX</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css
+"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- NAVBAR ============================= -->
+    <nav>
+      <div class="container nav-container">
+        <a href="#" class="main-logo">
+          <img
+            src="/assets/images/nav-logo.svg"
+            alt="deliverX logo"
+            decoding="async"
+          />
+        </a>
+        <ul class="nav-main-ul">
+          <!-- JS Provided -->
+        </ul>
+      </div>
+    </nav>
+    <!-- NAVBAR ============================= -->
+
+    <div style="height: 1000px">boxer</div>
+
+    <div
+      class="box"
+      style="border: 1px solid #f00; width: 500px; height: 500px"
+    >
+      Hello
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script>
+      gsap.from(".box", {
+        scrollTrigger: {
+          trigger: ".box",
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // play عند النزول - والباقي none = مش هيعيد الانيميشن
+        },
+        y: 100,
+        opacity: 0,
+        scale: 0.5,
+        duration: 0.5,
+        ease: "back.out(.5)",
+      });
+    </script>
+  </body>
+</html>

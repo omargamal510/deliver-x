@@ -1,0 +1,38 @@
+@use "variables" as *;
+// General
+@mixin rem-size {
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 16px;
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    font-size: 15px;
+  }
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}
+
+@mixin flex-main(
+  $gap: 10px,
+  $justify: center,
+  $align: center,
+  $direction: row
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+// General
+
+// Navbar
+@mixin nav-height($desktop, $mobile, $breakpoint: 771px) {
+  height: $desktop;
+
+  @media (max-width: $breakpoint) {
+    height: $mobile;
+  }
+}
+// Navbar

@@ -1,0 +1,60 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; // default
+  @include rem-size;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+// Navbar ======================
+nav {
+  background-color: #fff;
+  box-shadow: 0 3px 12px #1212120f;
+
+  @include nav-height(120px, 80px);
+  padding: 20px;
+  padding-top: 30px;
+
+  .main-logo {
+    display: block;
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-main-ul {
+  width: 100%;
+  margin-top: 20px;
+
+  list-style: none;
+  @include flex-main(40px, flex-end, center);
+
+  li {
+    font-weight: 500;
+    font-size: 1rem;
+    transition: $linear-transition-3;
+    cursor: pointer;
+    @include flex-main(7px, center, center);
+    border: 1px solid #f00;
+  }
+
+  li:hover {
+    color: $primary-orange;
+  }
+}
+
+// Navbar ======================
