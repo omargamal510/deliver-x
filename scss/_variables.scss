@@ -4,6 +4,7 @@ $font-primary: "Metropolis", system-ui, -apple-system, "Segoe UI", Roboto,
 
 // Colors
 $primary-orange: #ff5634;
+$primary-gray: #656565;
 
 // Spacing
 $main-spacing-inline: 102px;
@@ -13,3 +14,6 @@ $margin-nav-ul: 20px;
 $linear-transition-3: all 0.3s linear;
 
 // sizes
+
+// animations
+$animation-up-down: bounceY 1.5s linear infinite forwards;

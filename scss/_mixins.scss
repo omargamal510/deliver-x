@@ -59,3 +59,20 @@
   border: 1px solid $primary-orange;
 }
 // Navbar
+
+// Hero
+
+@mixin heroAbsoluteImgs($dir) {
+  position: absolute;
+  max-width: 45%;
+  box-shadow: 0 14px 42px 0 #10101024;
+  border-radius: 16px;
+  @if $dir == right {
+    right: 0;
+    bottom: 30px;
+  } @else {
+    left: 0;
+    bottom: 80px;
+  }
+}
+// Hero

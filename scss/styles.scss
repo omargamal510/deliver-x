@@ -147,4 +147,47 @@ nav {
 .hero {
   padding-top: 50px;
 }
+
+.hero-content {
+  h3 {
+    color: $primary-orange;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-weight: bolder;
+    font-size: 3.2rem;
+    color: #000;
+  }
+
+  p {
+    line-height: 1.667rem;
+    color: $primary-gray;
+    font-size: 1.2rem;
+  }
+}
+
+.img-hero {
+  animation: $animation-up-down;
+}
+
+@keyframes bounceY {
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.img-hero1 {
+  @include heroAbsoluteImgs(left);
+}
+
+.img-hero2 {
+  @include heroAbsoluteImgs(right);
+}
 // Hero ==========================
