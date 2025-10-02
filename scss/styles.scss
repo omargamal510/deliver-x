@@ -146,6 +146,7 @@ nav {
 // Hero ==========================
 .hero {
   padding-top: 50px;
+  background-color: #fafafa;
 }
 
 .hero-content {
@@ -191,3 +192,28 @@ nav {
   @include heroAbsoluteImgs(right);
 }
 // Hero ==========================
+
+// Hero stat
+.hero-stats {
+  background-color: #fafafa;
+  padding-top: 30px;
+}
+
+.hero-stat {
+  color: #000;
+  text-align: center;
+  span {
+    font-size: 3rem;
+  }
+  span:last-of-type {
+    color: $primary-orange;
+  }
+  * {
+    font-weight: bold;
+  }
+
+  p {
+    color: $primary-gray;
+  }
+}
+// Hero stat

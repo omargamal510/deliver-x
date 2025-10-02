@@ -6,7 +6,7 @@ function hasHTML(text) {
   return regex.test(text);
 }
 
-// appendHTMLElement Factory function
+// appendHTMLElement Factory function => factory design
 function elementFactory(type, className = "element", text = "") {
   const el = document.createElement(type);
   if (className) el.classList.add(className);
@@ -21,9 +21,27 @@ function elementFactory(type, className = "element", text = "") {
 }
 
 // Usage
-export function appendHTMLElement(textArray, elementType, parent, className) {
+export function appendSmallHTMLElement(
+  textArray,
+  elementType,
+  parent,
+  className
+) {
   textArray.forEach((text) => {
     const element = elementFactory(elementType, className, text);
     parent.append(element);
+  });
+}
+
+export function appendObjectHTMLElement(
+  dataObject,
+  elementsType = [],
+  parent,
+  className
+) {
+  dataObject.forEach(({ ...props }) => {
+    Object.keys(props).forEach((e, index) => {
+      const el = document.createElement(elementsType[index]);
+    });
   });
 }

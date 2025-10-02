@@ -9,3 +9,7 @@ export const navSmUlSpan2 = document.querySelector(
   ".nav-sm-trigger span:last-of-type"
 );
 // nav helpers
+
+// Hero stats helpers
+export const heroStatsParent = document.querySelector(".hero-stats-container");
+// Hero stats helpers
