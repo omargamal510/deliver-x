@@ -36,6 +36,14 @@
   }
 }
 
+@mixin navTriggerDiv($desktop, $mobile, $breakpoint: 771px) {
+  top: $desktop !important;
+
+  @media (max-width: $breakpoint) {
+    top: $mobile !important;
+  }
+}
+
 @mixin navbarButton {
   background-color: #fff;
   border: 1px solid #ededed;

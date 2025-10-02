@@ -20,23 +20,23 @@ body {
 nav {
   background-color: #fff;
   box-shadow: 0 3px 12px #1212120f;
-
   @include nav-height(120px, 80px);
-  padding: 20px;
-  padding-top: 30px;
-
+  @include flex-main(0px, center, center);
   .main-logo {
     display: flex;
+    z-index: 2;
   }
 }
 
 .nav-container {
-  @include flex-main(40px, space-between, flex-start);
+  @include flex-main(40px, space-between, center);
 }
 
 .nav-main-ul {
+  margin-top: $margin-nav-ul;
   width: 100%;
   list-style: none;
+
   @include flex-main(30px, flex-end, center);
 
   li {
@@ -72,4 +72,79 @@ nav {
   }
 }
 
+.nav-sm-ul {
+  background-color: #fff;
+  margin-top: $margin-nav-ul;
+  position: fixed;
+  opacity: 0;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  top: -200px;
+  height: 100px;
+  transition: $linear-transition-3;
+  list-style: none;
+  padding-bottom: 200px;
+  @include flex-main(7px, center, center, column);
+
+  li {
+    font-size: 2rem;
+    font-weight: 500;
+    transition: $linear-transition-3;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: $primary-orange;
+  }
+}
+
+.nav-sm-trigger {
+  height: 20px;
+  width: 40px;
+  padding: 10px 5px;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 1;
+
+  @include flex-main(10px, center, flex-end, column);
+  span {
+    background-color: #000;
+    border-radius: 100px;
+    width: 100%;
+    border: 2px solid #000;
+    display: block;
+    transition: $linear-transition-3;
+  }
+
+  span:last-of-type {
+    width: 70%;
+  }
+}
+
+.nav-sm-ul-trigger {
+  height: 100vh !important;
+  @include navTriggerDiv(100px, 50px);
+  opacity: 1 !important;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+.nav-sm-trigger-span-1 {
+  transform: rotate(100deg);
+  width: 100% !important;
+}
+
+.nav-sm-trigger-span-2 {
+  width: 100% !important;
+  transform: translateY(-15px);
+}
+
 // Navbar ======================
+
+// Hero ==========================
+.hero {
+  padding-top: 50px;
+}
+// Hero ==========================
